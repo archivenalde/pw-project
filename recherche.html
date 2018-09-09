@@ -2,29 +2,77 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="recherche.css"/>
         <title>Recherche d'un produit</title>
     </head>
     <body>
-        <form>
-            <input type="text" placeholder="Entrez le nom d'un produit, composant, etc..." id="search"/>
-            <button>Rechercher</button>
-        </form>
-        <h2>Resultats de la recherche : "bois"</h2>
-        <table>
-            <thead>
-                <tr>
-                    <td>Produit</td>
-                    <td>Identifiant</td>
-                    <td>Quantité</td>
-                </tr>
-            </thead>
-            <tr>
-                <td><a href="#">Piano</a></td>
-                <td>112233445566</td>
-                <td>5</td>
-            </tr>
+    	<!--
+	        <form>
+	            <input type="text" placeholder="Entrez le nom d'un produit, composant, etc..." id="search"/>
+	            <button>Rechercher</button>
+	        </form>
+	        <h2>Resultats de la recherche : "bois"</h2>
+	        <table>
+	            <thead>
+	                <tr>
+	                    <td>Produit</td>
+	                    <td>Identifiant</td>
+	                    <td>Quantité</td>
+	                </tr>
+	            </thead>
+	            <tr>
+	                <td><a href="#">Piano</a></td>
+	                <td>112233445566</td>
+	                <td>5</td>
+	            </tr>
 
-        </table>
+	        </table>
+    	-->
+    	<div id=main-wrapper>
+    		<div id="background-header">
+		    	<header>
+		    		<div id=pagename-user>
+		    			<h1>Produits</h1>
+		    			<h3>user</h3>
+					</div>
+		    		<nav>
+		    			<ul>
+		    				<li><a href="#">Recherche par mots-clefs</a></li>
+		    				<li><a href="#">Recherche avancée</a></li>
+		    			</ul>
+		    		</nav>
+		    	</header>
+		    </div>
+
+	    	<div id=research-results-section>
+		    	<section id=research-section>
+		    		<form>
+		    			<label for="search">Recherche</label>
+		    			<input type="text" name="search" id="search"/>
+		    		</form>	
+		    	</section>
+
+		    	<section id=results-section>
+		    		<article>
+		    			<h4>Piano</h4>
+		    			<p>01/01/01</p>
+		    			<p>Id : 11111</p>
+		    			<p>Quantité : 5</p>
+		    		</article>
+		    		<article>
+		    			<h4>Blocs-Notes</h4>
+		    			<p>01/01/01</p>
+		    			<p>Id : 22222</p>
+		    			<p>Quantité : 8</p>
+		    		</article>
+		    		<article>
+		    			<h4>Clavier</h4>
+		    			<p>01/01/01</p>
+		    			<p>Id : 33333</p>
+		    			<p>Quantité : 1</p>
+		    		</article>
+		    	</section>
+		    </div>
+	    </div>
     </body>
 </html>
