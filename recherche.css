@@ -29,7 +29,7 @@ header h3, header h1, header div {
 }
 
 #research-results-section{
-	width: 750px;
+	width: 1100px;
 	margin: auto;
 }
 
@@ -56,4 +56,22 @@ a {
 
 a:hover {
 	text-decoration: underline;
+}
+
+
+article {
+	margin: 5px;
+}
+
+/* tests */
+
+/*[class*="col"] {
+	background-color: lightgreen;
+	border: solid 2px grey;
+}*/
+
+article {
+	background-color: #56afb7;
+	box-shadow: 4px 4px 2px grey;
+	color: white;
 }
