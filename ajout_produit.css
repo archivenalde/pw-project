@@ -1,0 +1,77 @@
+body {
+	margin: 0px;
+}
+
+#background-header {
+	background: #56afb7;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 1100px;
+	margin: auto;
+}
+
+#pagename-user {
+	display: flex;
+	width: 1100px;
+	justify-content: space-between;
+}
+
+#pagename-user h3 {
+	align-self: center;
+}
+header h3, header h1, header div {
+	color: white;
+}
+
+#research-results-section{
+	width: 1100px;
+	margin: auto;
+}
+
+nav {
+	align-self: flex-start;
+}
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+
+nav ul li {
+	margin-right: 50px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+article {
+	margin: 5px;
+}
+
+/* tests */
+
+/*[class*="col"] {
+	background-color: lightgreen;
+	border: solid 2px grey;
+}*/
+
+article {
+	background-color: #56afb7;
+	box-shadow: 4px 4px 2px grey;
+	color: white;
+}
