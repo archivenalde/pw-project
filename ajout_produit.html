@@ -23,19 +23,32 @@
             </header>
         </div>
 
-        <form>
-            <fieldset>
-                Nom du produit :<input type="text" placeholder="Nom" id="name"/><br>
-                Quantité :<input type="text" placeholder="Nom" id="name"/><br>
-            </fieldset>
-            <fieldset>
-                <legend>Composants</legend>
-                <input type="text" placeholder="Composant 1" id="comp1"/><input type="text" placeholder="Valeur" id="val1"/><br>
-                <input type="text" placeholder="Composant 2" id="comp2"/><input type="text" placeholder="Valeur" id="val2"/><br>
-                <input type="text" placeholder="Composant 3" id="comp3"/><input type="text" placeholder="Valeur" id="val3"/><br>
-                <button type="submit"><!--<img class="add_image" src="add_button.png" alt="Ajouter champ"/> -->Ajouter</button>
-            </fieldset>
-            <button type="submit">Ajouter</button>
-        </form>
+        <div id="body-page">
+            <form>
+                <fieldset>
+                    <div class="form-group">
+                        <label for="product-name">
+                            Nom du produit
+                        </label>
+                        <input type="text" placeholder="Nom" id="product-name" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-quantity">
+                            Quantité 
+                        </label>
+                        <input type="text" placeholder="Nom" id="product-quantity" class="form-control"/>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Composants</legend>
+                    <input type="text" placeholder="Composant 1" id="comp1"/><input type="text" placeholder="Valeur" id="val1"/><br>
+                    <input type="text" placeholder="Composant 2" id="comp2"/><input type="text" placeholder="Valeur" id="val2"/><br>
+                    <input type="text" placeholder="Composant 3" id="comp3"/><input type="text" placeholder="Valeur" id="val3"/><br>
+                    <button type="button"><!--<img class="add_image" src="add_button.png" alt="Ajouter champ"/> -->Ajouter un composant</button>
+                </fieldset>
+                <button type="submit" class="btn btn-primary">Ajouter le produit</button>
+            </form>
+        </div>
     </body>
 </html>
