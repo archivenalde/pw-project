@@ -2,40 +2,43 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="ajout_produit.css"/>
+        <link rel="stylesheet" href="accueil.css"/>
         <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
-        <title>Ajout d'un produit</title>
+        <title>Prodhisto - Une nouvelle façon de consommer</title>
     </head>
     <body>
-        <div id="background-header">
-            <header>
-                <div id=pagename-user>
-                    <h1>Accueil</h1>
-                    <h3><a href="#">S'inscrire</a></h3>
+        <header class="index-header">
+            <div class="header-dock">
+                <h4>Menu</h4>
+                <div class="log-dock">
+                    <h4>Inscription</h4>
+                    <h4>|</h4>
+                    <h4>Connexion</h4>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Recherche par mots-clefs</a></li>
-                        <li><a href="#">Recherche avancée</a></li>
-                        <li><a href="#">Ajout produit</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
+            </div>
+            </div>
+            <h1 class="website-name">Prodhisto</h1>
+            <p>Une nouvelle façon de consommer</p>
+            <form>
+                <input type="text" placeholder="Chercher un produit" />
+            </form>
+        </header>
 
         <div id="body-page">
             <h3> Les derniers produits </h3>
 
-            <section class="row">
-               <div class="col-md-4">
-                    <article>
-                        <h4>Piano</h4>
-                        <p>01/01/01</p>
-                        <p>Id : 11111</p>
-                        <p>Quantité : 5</p>
-                    </article>
-                </div>
-            </section>
+            <div class="container">
+                <section class="row">
+                   <div class="col-md-4">
+                        <article>
+                            <h4>Piano</h4>
+                            <p>01/01/01</p>
+                            <p>Id : 11111</p>
+                            <p>Quantité : 5</p>
+                        </article>
+                    </div>
+                </section>
+            </div>
         </div>
     </body>
 </html>

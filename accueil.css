@@ -1,0 +1,105 @@
+* {
+    outline: 0;
+}
+
+body {
+	margin: 0px;
+}
+
+header.index-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    background: #56afb7;
+    height: 500px;
+}
+
+.header-dock, .log-dock {
+    display: flex;
+}
+
+.header-dock {
+    justify-content: space-between;
+    width: 1100px;
+}
+
+.log-dock h4 {
+    padding: 0px 10px;
+}
+
+.website-name{
+    text-align: center;
+    width: 1100px;
+    margin-top: 0px;
+    padding-top: 80px;
+    font-size: 5em;
+}
+
+.website-name + p {
+    width: 1100px;
+    text-align: center;
+    font-size: 2.5em;
+    color: #e0e0e0;
+    font-style: italic;
+}
+
+form {
+    width: 1100px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+input[type=text] {
+    width: 60%;
+    height: 70px;
+    padding-left: 20px;
+    border: solid #56afb7 3px;
+    border-radius: 70px;
+    background-color: #f1f1f1;
+    font-size: 30px;
+}
+
+input[type=text]:focus {
+    border: solid grey 3px;
+}
+
+
+header h3, header h1, header div {
+	color: white;
+}
+
+#body-page{
+	width: 1100px;
+	margin: auto;
+	margin-top: 15px;
+}
+
+
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+article {
+	margin: 5px;
+}
+
+/* tests */
+
+/*[class*="col"] {
+	background-color: lightgreen;
+	border: solid 2px grey;
+}*/
+
+article {
+	background-color: #56afb7;
+	box-shadow: 4px 4px 2px grey;
+	color: white;
+}
