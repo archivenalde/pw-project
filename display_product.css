@@ -31,7 +31,6 @@ header h3, header h1, header div {
 #body-page{
 	width: 1100px;
 	margin: auto;
-	margin-top: 15px;
 }
 
 nav {
@@ -75,4 +74,12 @@ article {
 	background-color: #1D8089;
 	box-shadow: 4px 4px 2px grey;
 	color: white;
+}
+
+/*div.col-lg-4, div.col-lg-8 {
+    border: solid black 2px;
+}*/
+
+img {
+    width: 100%;
 }

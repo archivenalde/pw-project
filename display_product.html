@@ -2,23 +2,46 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="style.css"/>
-        <title>Bloc-Notes</title>
+        <link rel="stylesheet" href="display_product.css"/>
+        <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+        <title>Blocs-notes</title>
     </head>
     <body>
-        <h1> Blocs-Notes </h1>
+        <div id="background-header">
+	    	<header>
+	    		<div id=pagename-user>
+	    			<h1>Prodhisto</h1>
+	    			<h3>user</h3>
+				</div>
+	    		<nav>
+	    			<ul>
+	    				<li><a href="#">Recherche par mots-clefs</a></li>
+	    				<li><a href="#">Recherche avancée</a></li>
+	    				<li><a href="#">Ajout produit</a></li>
+	    			</ul>
+	    		</nav>
+	    	</header>
+	    </div>
 
-        <div>
-            <p> Identifiant : 123456 </p>
-            <p> Quantité : 2 </p>
-        </div>
+        <div id="body-page" class="container">
+            <div class="row">
+                <div class="col-lg-4"><img src="./images/bloc-note.jpg"></div>
 
-        <h3> Attributs </h3>
-        <div>
-            <ul>
-                <li>Format : A4</li>
-                <li>Nombre de pages : 100 </li>
-            </ul>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <h3>Blocs-Notes</h3><br/>
+                        Identifiant : 12345
+                    </div>
+
+                    <h3> Attributs </h3>
+                    <div>
+                        <ul>
+                            <li>Format : A4</li>
+                            <li>Nombre de pages : 100 </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

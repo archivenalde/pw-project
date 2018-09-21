@@ -3,7 +3,7 @@ body {
 }
 
 #background-header {
-	background: #56afb7;
+	background: #1D8089;
 }
 
 header {
@@ -60,7 +60,7 @@ a:hover {
 
 
 article {
-	margin: 5px;
+
 }
 
 /* tests */
@@ -71,7 +71,8 @@ article {
 }*/
 
 article {
-	background-color: #56afb7;
+	margin: 5px;
+	background-color: #1D8089;
 	box-shadow: 4px 4px 2px grey;
 	color: white;
 }
