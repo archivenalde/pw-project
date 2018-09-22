@@ -25,7 +25,8 @@
 
         <div id="body-page">
             <form>
-                <fieldset>
+                <fieldset class="product-name">
+
                     <div class="form-group">
                         <label for="product-name">
                             Nom du produit
@@ -33,22 +34,21 @@
                         <input type="text" placeholder="Nom" id="product-name" class="form-control"/>
                     </div>
 
-                    <div class="form-group">
-                        <label for="product-quantity">
-                            Quantité 
-                        </label>
-                        <input type="number" placeholder="00" id="product-quantity" class="form-control"/>
-                    </div>
                 </fieldset>
-                <fieldset>
+                <fieldset id="component-fieldset">
                     <legend>Composants</legend>
                     <input type="text" placeholder="Composant 1" id="comp1"/><input type="text" placeholder="Valeur" id="val1"/><br>
                     <input type="text" placeholder="Composant 2" id="comp2"/><input type="text" placeholder="Valeur" id="val2"/><br>
                     <input type="text" placeholder="Composant 3" id="comp3"/><input type="text" placeholder="Valeur" id="val3"/><br>
-                    <button type="button"><!--<img class="add_image" src="add_button.png" alt="Ajouter champ"/> -->Ajouter un composant</button>
                 </fieldset>
+                <button type="button" id="add-component"><!--<img class="add_image" src="add_button.png" alt="Ajouter champ"/> -->Ajouter un composant</button>
                 <button type="submit" class="btn btn-primary">Ajouter le produit</button>
             </form>
         </div>
+
+        <script type="text/javascript" src="ajout_produit.js">
+            
+
+        </script>
     </body>
 </html>

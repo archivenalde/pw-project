@@ -50,7 +50,7 @@ nav ul li {
 	margin-right: 50px;
 }
 
-a {
+nav ul li a {
 	color: white;
 	text-decoration: none;
 }
@@ -75,4 +75,15 @@ article {
 	background-color: #1D8089;
 	box-shadow: 4px 4px 2px grey;
 	color: white;
+}
+
+div.form-group label {
+	display: block;
+	text-align: center;
+}
+
+div.form-group input {
+	width: 70%;
+	display: block;
+	margin: auto;
 }
