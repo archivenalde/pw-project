@@ -10,8 +10,10 @@ document.getElementById("add-component").addEventListener("click", function() {
 
     newInputName.placeholder = "Composant " + i;
     newInputName.id = "comp" + i;
+    newInputName.name = "comp" + i;
     newInputValue.placeholder = "Valeur";
     newInputValue.id = "val" + i;
+    newInputValue.name = "val" + i;
     
 
     parentFieldset.appendChild(newInputName);
