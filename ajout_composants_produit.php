@@ -25,25 +25,24 @@
 
         <div id="body-page">
 
-            <form action="./ajout_nom_produit.php" method="post" id="add-product-form">
-                <fieldset class="product-name">
+        <form action=<?php echo "./ajout_composants_produit_bdd.php?product-name=".$_GET["product-name"]."&idprod=".$_GET["idprod"]; ?> 
+        method="post" id="add-component-form">
+                
+                <fieldset id="component-fieldset">
+                    <legend>Composants de <?php echo $_GET["product-name"]; ?>
+                    </legend>
 
-                    <div class="form-group">
-                        <label for="product-name">
-                            Nom du produit
-                        </label>
-                        <input type="text" placeholder="Nom" id="product-name" name="product-name" class="form-control" required/>
-                        <button type="submit" id="add-product">Valider le nom du produit</button>
-                    </div>
-
+                    <input type="text" placeholder="Composant 1" id="comp1" name="comp"/>
+                    <input type="text" placeholder="Valeur" id="val1" name="val"/>
                 </fieldset>
+                <button type="submit" class="btn btn-primary">Ajouter le composant</button>
             </form>
-
         </div>
 
-        <script type="text/javascript" src="ajout_produit.js">
+        <script type="text/javascript" src="ajout_composants_produit.js">
             
 
         </script>
     </body>
 </html>
+

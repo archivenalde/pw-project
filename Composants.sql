@@ -2,10 +2,10 @@
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost
--- Généré le :  jeu. 20 sep. 2018 à 22:17
--- Version du serveur :  10.1.35-MariaDB
--- Version de PHP :  7.2.9
+-- Host: localhost
+-- Generation Time: Sep 23, 2018 at 06:55 PM
+-- Server version: 10.1.35-MariaDB
+-- PHP Version: 7.2.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `pw-project`
+-- Database: `pw-project`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Composants`
+-- Table structure for table `Composants`
 --
 
 CREATE TABLE `Composants` (
@@ -35,50 +35,47 @@ CREATE TABLE `Composants` (
   `prod_associe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
 --
--- Index pour les tables déchargées
---
-
---
--- Index pour la table `Composants`
---
-ALTER TABLE `Composants`
-  ADD PRIMARY KEY (`idcomp`),
-  ADD KEY `fk_produits_composants` (`prod_associe`);
-
---
--- AUTO_INCREMENT pour les tables déchargées
---
-
---
--- AUTO_INCREMENT pour la table `Composants`
---
-ALTER TABLE `Composants`
-  MODIFY `idcomp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- Contraintes pour les tables déchargées
---
-
---
--- Contraintes pour la table `Composants`
---
-ALTER TABLE `Composants`
-  ADD CONSTRAINT `fk_produits_composants` FOREIGN KEY (`prod_associe`) REFERENCES `Composants` (`idcomp`);
-COMMIT;
-
---
--- Déchargement des données de la table `Composants`
+-- Dumping data for table `Composants`
 --
 
 INSERT INTO `Composants` (`idcomp`, `type`, `quantite`, `prod_associe`) VALUES
-(1, 'Préparation à la framboise', '41%', 1),
-(2, 'Chocolat', '24%', 1),
-(3, 'Lactose', NULL, 1),
-(4, 'Chocolat', '24%', 1),
-(5, 'Lactose', NULL, 1);
+(7, 'azedf', '', 27),
+(8, 'azef', '', 27),
+(9, 'fe', '', 27),
+(10, 'zd', 'zdfz', 28);
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `Composants`
+--
+ALTER TABLE `Composants`
+  ADD PRIMARY KEY (`idcomp`),
+  ADD KEY `fk_composants_produits` (`prod_associe`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `Composants`
+--
+ALTER TABLE `Composants`
+  MODIFY `idcomp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `Composants`
+--
+ALTER TABLE `Composants`
+  ADD CONSTRAINT `fk_composants_produits` FOREIGN KEY (`prod_associe`) REFERENCES `Produits` (`idprod`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
