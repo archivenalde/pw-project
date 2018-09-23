@@ -1,11 +1,3 @@
-let i = 1;
-
-
-document.getElementById("add-product").addEventListener("click", function() {
-    document.getElementById("add-name-product-form").submit();
-});
-
-
 document.getElementById("add-component").addEventListener("click", function() {
     // i++;
 
@@ -25,12 +17,12 @@ document.getElementById("add-component").addEventListener("click", function() {
     // parentFieldset.appendChild(newInputName);
     // parentFieldset.appendChild(newInputValue);
     // parentFieldset.appendChild(newBR);
+    console.log("coucou")
 
-    let nameComponent = document.getElementById("comp1");
-    let valueComponent = document.getElementById("val1");
+    let nameComponent = document.getElementById("comp");
+    let valueComponent = document.getElementById("val");
 
     if (nameComponent.value.length > 0 && valueComponent.value.length > 0) {
-        document.getElementById("add-component-form").submit();
         nameComponent.value = "";
         valueComponent.value = "";
     }

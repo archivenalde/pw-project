@@ -32,10 +32,10 @@
                     <legend>Composants de <?php echo $_GET["product-name"]; ?>
                     </legend>
 
-                    <input type="text" placeholder="Composant 1" id="comp1" name="comp"/>
-                    <input type="text" placeholder="Valeur" id="val1" name="val"/>
+                    <input type="text" placeholder="Composant" id="comp" name="comp"/>
+                    <input type="text" placeholder="Valeur" id="val" name="val"/>
                 </fieldset>
-                <button type="submit" class="btn btn-primary">Ajouter le composant</button>
+                <button type="submit" class="btn btn-primary" id="add-component">Ajouter le composant</button>
             </form>
         </div>
 
