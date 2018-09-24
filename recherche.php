@@ -23,10 +23,20 @@
 	    	</header>
 	    </div>
 
+	    <?php
+	    	try {
+				$bdd = new PDO('mysql:host=localhost;dbname=pw-project;charset=utf8', 'root', 'root');
+			} catch (Exception $e) {
+    			die('Erreur : '.$e->getMessage());
+			}
+
+			$req = $bdd->query("SELECT * FROM Produits WHERE nom LIKE '%".$_GET['search']."%'");
+	    ?>
+
     	<div id=body-page class="container">
 	    	<section id=research-section class="row">
 	    		<div class="col-md-4 col-md-offset-4">
-	    			<form>
+	    			<form action="./recherche.php" method="GET">
 	    				<label for="search">Recherche</label>
 	    				<input type="text" name="search" id="search"/>
 	    			</form>	
@@ -35,12 +45,25 @@
 	    	</section>
 
 	    	<section id=results-section class="row">
-	    		<div class="col-md-4">
+
+	    		<?php
+	    			while ($donnes = $req->fetch())
+	    			{
+	    				echo 	"
+	    						<div class=\"col-md-4\">
+	    						<article>
+		    					<h4>".$donnes["nom"]."</h4>
+		    					<p>".$donnes["date_ajout"]."</p>
+		    					<p>Id : ".$donnes["idprod"]."</p>
+	    						</article>
+	    						</div>";
+	    			}
+	    		?>
+	    		<!-- <div class="col-md-4">
 	    			<article>
 		    			<h4>Piano</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 11111</p>
-		    			<p>Quantité : 5</p>
 		    		</article>
 	    		</div>
 	    		<div class="col-md-4">
@@ -48,7 +71,6 @@
 		    			<h4>Blocs-Notes</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 22222</p>
-		    			<p>Quantité : 8</p>
 		    		</article>	
 	    		</div>
 	    		<div class="col-md-4">
@@ -56,7 +78,6 @@
 		    			<h4>Clavier</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 33333</p>
-		    			<p>Quantité : 1</p>
 		    		</article>
 	    		</div>
 	    		<div class="col-md-4">
@@ -64,7 +85,6 @@
 		    			<h4>Piano</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 11111</p>
-		    			<p>Quantité : 5</p>
 		    		</article>
 	    		</div>
 	    		<div class="col-md-4">
@@ -72,7 +92,6 @@
 		    			<h4>Blocs-Notes</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 22222</p>
-		    			<p>Quantité : 8</p>
 		    		</article>	
 	    		</div>
 	    		<div class="col-md-4">
@@ -80,7 +99,6 @@
 		    			<h4>Clavier</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 33333</p>
-		    			<p>Quantité : 1</p>
 		    		</article>
 	    		</div>
 	    		<div class="col-md-4">
@@ -88,7 +106,6 @@
 		    			<h4>Piano</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 11111</p>
-		    			<p>Quantité : 5</p>
 		    		</article>
 	    		</div>
 	    		<div class="col-md-4">
@@ -96,7 +113,6 @@
 		    			<h4>Blocs-Notes</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 22222</p>
-		    			<p>Quantité : 8</p>
 		    		</article>	
 	    		</div>
 	    		<div class="col-md-4">
@@ -104,9 +120,8 @@
 		    			<h4>Clavier</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 33333</p>
-		    			<p>Quantité : 1</p>
 		    		</article>
-	    		</div>
+	    		</div> -->
 	    	</section>
 	    </div>
 	    
