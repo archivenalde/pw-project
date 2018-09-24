@@ -23,6 +23,7 @@ document.getElementById("add-component").addEventListener("click", function() {
     let valueComponent = document.getElementById("val");
 
     if (nameComponent.value.length > 0 && valueComponent.value.length > 0) {
+        document.getElementById("add-component-form").submit();
         nameComponent.value = "";
         valueComponent.value = "";
     }

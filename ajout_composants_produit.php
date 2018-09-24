@@ -35,7 +35,7 @@
                     <input type="text" placeholder="Composant" id="comp" name="comp"/>
                     <input type="text" placeholder="Valeur" id="val" name="val"/>
                 </fieldset>
-                <button type="submit" class="btn btn-primary" id="add-component">Ajouter le composant</button>
+                <button type="button" class="btn btn-primary" id="add-component">Ajouter le composant</button>
             </form>
         </div>
 
