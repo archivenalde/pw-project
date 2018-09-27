@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  jeu. 27 sep. 2018 à 15:34
+-- Généré le :  jeu. 27 sep. 2018 à 17:08
 -- Version du serveur :  10.1.35-MariaDB
 -- Version de PHP :  7.2.9
 
@@ -25,31 +25,36 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Produits`
+-- Structure de la table `Utilisateur`
 --
 
-CREATE TABLE `Produits` (
-  `idprod` int(11) NOT NULL,
-  `nomprod` varchar(255) NOT NULL,
-  `dateajout` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE `Utilisateur` (
+  `idutilisateur` int(11) NOT NULL,
+  `nomutilisateur` varchar(50) NOT NULL,
+  `dateinscription` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `statut` set('UTILISATEUR','ADMINISTRATEUR') NOT NULL DEFAULT 'UTILISATEUR'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `Produits`
---
-
-INSERT INTO `Produits` (`idprod`, `nomprod`, `dateajout`) VALUES
-(645615, 'Pim\'s', '2018-09-27 15:14:09');
 
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `Produits`
+-- Index pour la table `Utilisateur`
 --
-ALTER TABLE `Produits`
-  ADD UNIQUE KEY `uc_nomcomp_produit` (`nomprod`);
+ALTER TABLE `Utilisateur`
+  ADD PRIMARY KEY (`idutilisateur`),
+  ADD UNIQUE KEY `uc_nomutilisateur_utilisateur` (`nomutilisateur`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `Utilisateur`
+--
+ALTER TABLE `Utilisateur`
+  MODIFY `idutilisateur` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -12,12 +12,12 @@ document.getElementById("add-component").addEventListener("click", function() {
     // newInputValue.placeholder = "Valeur";
     // newInputValue.id = "val" + i;
     // newInputValue.name = "val" + i;
-    
+
 
     // parentFieldset.appendChild(newInputName);
     // parentFieldset.appendChild(newInputValue);
     // parentFieldset.appendChild(newBR);
-    console.log("coucou")
+
 
     let nameComponent = document.getElementById("comp");
     let valueComponent = document.getElementById("val");

@@ -25,7 +25,7 @@
 
 	    <?php
 	    	try {
-				$bdd = new PDO('mysql:host=localhost;dbname=pw-project;charset=utf8', 'root', 'root');
+				$bdd = new PDO('mysql:host=localhost;dbname=pw-project;charset=utf8','root','password');
 			} catch (Exception $e) {
     			die('Erreur : '.$e->getMessage());
 			}
@@ -39,9 +39,9 @@
 	    			<form action="./recherche.php" method="GET">
 	    				<label for="search">Recherche</label>
 	    				<input type="text" name="search" id="search"/>
-	    			</form>	
+	    			</form>
 	    		</div>
-	    		
+
 	    	</section>
 
 	    	<section id=results-section class="row">
@@ -71,7 +71,7 @@
 		    			<h4>Blocs-Notes</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 22222</p>
-		    		</article>	
+		    		</article>
 	    		</div>
 	    		<div class="col-md-4">
 	    			<article>
@@ -92,7 +92,7 @@
 		    			<h4>Blocs-Notes</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 22222</p>
-		    		</article>	
+		    		</article>
 	    		</div>
 	    		<div class="col-md-4">
 	    			<article>
@@ -113,7 +113,7 @@
 		    			<h4>Blocs-Notes</h4>
 		    			<p>01/01/01</p>
 		    			<p>Id : 22222</p>
-		    		</article>	
+		    		</article>
 	    		</div>
 	    		<div class="col-md-4">
 	    			<article>
@@ -124,6 +124,6 @@
 	    		</div> -->
 	    	</section>
 	    </div>
-	    
+
     </body>
 </html>
