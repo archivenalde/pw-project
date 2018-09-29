@@ -1,0 +1,33 @@
+#body-connexion-page {
+	width: 400px;
+	height: 800px;
+	margin: auto;
+	background: #1D8089;
+	border: solid black 1px;
+	margin-top: 200px;
+	color: white;
+}
+
+#body-connexion-page form .form-group {
+	margin-top: 60px;
+	width: 70%;
+	margin: auto;
+}
+
+#body-connexion-page form .form-group label {
+	display: block;
+	text-align: center;
+}
+
+#body-connexion-page h3 {
+	display: block;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#body-connexion-page form button {
+	display: block;
+	margin: auto;
+	margin-top: 70px;
+	width: 70%;
+}
