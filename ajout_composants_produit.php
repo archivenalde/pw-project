@@ -1,48 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="ajout_produit.css"/>
-        <link rel="stylesheet" type="text/css" href="bootstrap-3.3.7-dist/css/bootstrap.css">
-        <title>Ajout d'un produit</title>
-    </head>
-    <body>
-        <div id="background-header">
-            <header>
-                <div id=pagename-user>
-                    <h1>Ajout d'un produit</h1>
-                    <h3>user</h3>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Recherche par mots-clefs</a></li>
-                        <li><a href="#">Recherche avancée</a></li>
-                        <li><a href="#">Ajout produit</a></li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
+<?php
 
-        <div id="body-page">
+try {
+	$bdd = new PDO('mysql:host=localhost;dbname=pw-project;charset=utf8', 'root', 'root');
+} catch (Exception $e) {
+    die('Erreur : '.$e->getMessage());
+	
+}
 
-        <form action=<?php echo "./ajout_composants_produit_bdd.php?product-name=".$_GET["product-name"]."&idprod=".$_GET["idprod"]; ?> 
-        method="post" id="add-component-form">
-                
-                <fieldset id="component-fieldset">
-                    <legend>Composants de <?php echo $_GET["product-name"]; ?>
-                    </legend>
+$req = $bdd->prepare('INSERT INTO Composants(type, quantite, prod_associe) VALUES (:type, :quantite, :prod_associe)');
+$req->execute(array(
+	'type' => htmlspecialchars($_POST["comp"]),
+	'quantite' => htmlspecialchars($_POST["val"]),
+	'prod_associe' => $_GET["idprod"]
+	));
 
-                    <input type="text" placeholder="Composant" id="comp" name="comp"/>
-                    <input type="text" placeholder="Valeur" id="val" name="val"/>
-                </fieldset>
-                <button type="button" class="btn btn-primary" id="add-component">Ajouter le composant</button>
-            </form>
-        </div>
+header("Location: ./ajout_composants_produit.php?product-name=".$_GET["product-name"]."&idprod=".$_GET["idprod"]);
 
-        <script type="text/javascript" src="ajout_composants_produit.js">
-            
 
-        </script>
-    </body>
-</html>
-
+?>
