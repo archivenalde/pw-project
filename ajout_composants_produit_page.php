@@ -25,8 +25,8 @@
 
         <div id="body-page">
 
-        <form action=<?php echo "./ajout_composants_produit_bdd.php?product-name=".$_GET["product-name"]."&idprod=".$_GET["idprod"]; ?> 
-        method="post" id="add-component-form">
+            <form action=<?php echo "./ajout_composants_produit_bdd.php?product-name=".$_GET["product-name"]."&idprod=".$_GET["idprod"]; ?> 
+            method="post" id="add-component-form">
                 
                 <fieldset id="component-fieldset">
                     <legend>Composants de <?php echo $_GET["product-name"]; ?>
