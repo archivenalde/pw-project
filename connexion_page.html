@@ -10,15 +10,15 @@
 		<div id="body-connexion-page">
 			<h3> Connexion </h3>
 
-			<form>
+			<form action="connexion.php" method="post">
 				<div class="form-group">
 					<label for="login">E-mail</label>
-					<input type="email" name="mail" id="mail" class="form-control" />
+					<input type="email" name="mail" id="mail" class="form-control" required/>
 				</div>
 
 				<div class="form-group">
 					<label for="password">Mot de passe</label>
-					<input type="password" name="password" id="password" class="form-control">
+					<input type="password" name="password" id="password" class="form-control" required>
 				</div>
 
 				<button type="submit" class="btn btn-primary">Connexion</button>

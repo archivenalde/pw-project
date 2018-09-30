@@ -28,6 +28,15 @@ header.index-header {
     padding: 0px 10px;
 }
 
+.log-dock .btn-link {
+    color: white;
+}
+
+.ref-signup-signin {
+    color: white;
+    border: 1px black;
+}
+
 .website-name{
     text-align: center;
     width: 1100px;
@@ -102,4 +111,25 @@ article {
 	background-color: #1D8089;
 	box-shadow: 4px 4px 2px grey;
 	color: white;
+}
+
+
+.dropdown-child {
+display: none;
+background-color: #f28c8c;
+min-width: 50px;
+}
+
+
+
+.dropdown-child a {
+color: white;
+padding: 20px;
+text-decoration: none;
+display: block;
+}
+
+
+.dropdown:hover .dropdown-child {
+display: block;
 }

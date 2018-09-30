@@ -2,7 +2,7 @@
 
 
 try {
-	$bdd = new PDO('mysql:host=localhost;dbname=pw-project;charset=utf8', 'root', 'root');
+	$bdd = new PDO('mysql:host=localhost;dbname=pw-project;charset=utf8', 'root', '');
 } catch (Exception $e) {
     die('Erreur : '.$e->getMessage());
 	
@@ -18,7 +18,6 @@ $req->execute(array('nomUtilisateur' => $_POST['lastname'],
 	                'adressemail' => $_POST['mail'],
 	                'password' => $passwordHash));
 
-if (!$succes)
-	$_POST['password'];
+header("Location: ./accueil_page.php");
 
 ?>
