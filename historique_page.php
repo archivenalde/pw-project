@@ -40,7 +40,7 @@ try {
         		<div class="col-xs-4" id="modif-nom-produit">
 
                     <?php
-                        $req = $bdd->query("SELECT nomprod, DATE_FORMAT(dateajout, 'Le %W %d %M %Y à %Hh%i') as DA 
+                        $req = $bdd->query("SELECT nomprod, dateajout, DATE_FORMAT(dateajout, 'Le %W %d %M %Y à %Hh%i') as DA 
                                                 FROM Produits 
                                                 WHERE idprod = ".$_GET['idprod']." ORDER BY dateajout");
                         $data = $req->fetch();
@@ -49,8 +49,10 @@ try {
                                     <article>
                                         <h4>Premier nom donne lors de l'ajout</h4>
                                         <p>".$data['nomprod']."</p>
-                                        <p>".$data['DA']."</p>
-                                    </article>
+                                        <p>".$data['DA']."</p>";
+                        include 'rollback_button.php';
+
+                        echo        "</article>
                                 </div>";
                         $ancienNom = $data['nomprod'];
                         while($data = $req->fetch())
@@ -59,9 +61,11 @@ try {
                                         <article>
                                             <h4>Modification du nom du produit</h4>
                                             <p>De ".$ancienNom." à ".$data['nomprod']."</p>
-                                            <p>".$data['DA']."</p>
-                                        </article>
-                                     </div>";
+                                            <p>".$data['DA']."</p>";
+                            include 'rollback_button.php';
+
+                            echo        "</article>
+                                    </div>";
                             $ancienNom = $data['nomprod'];
                         }
                     ?>
@@ -73,20 +77,42 @@ try {
         			<div class="row">
 
         				<?php
-                            $req = $bdd->query("SELECT idcomp, nomcomp, valcomp, DATE_FORMAT(dateajoutcomp, 'Le %W %d %M %Y à %Hh%i') as DA 
+                            $req = $bdd->query("SELECT idcomp, nomcomp, valcomp, dateajoutcomp, DATE_FORMAT(dateajoutcomp, 'Le %W %d %M %Y à %Hh%i') as DA 
                                                 FROM Composants 
                                                 WHERE idprod = ".$_GET['idprod']." ORDER BY dateajoutcomp");
                             while ($data = $req->fetch()) 
                             {
                                 if (isset($ancienneValeur[$data['idcomp']]))
                                 {
-                                    echo "  <div class=\"col-xs-6\">
-                                                <article>
-                                                    <h4>Modification du composant ".$data['nomcomp']."</h4>
-                                                    <p>".$ancienneValeur[$data['idcomp']]." modifie en ".$data['valcomp']."</p>
-                                                    <p>".$data['DA']."</p>
-                                                </article>
-                                            </div>";
+                                    if ($ancienneValeur[$data['idcomp']] != $data['valcomp'])
+                                    {
+                                        echo "  <div class=\"col-xs-6\">
+                                                    <article>
+                                                        <h4>Modification de la valeur du composant ".$data['nomcomp']."</h4>
+                                                        <p>".$ancienneValeur[$data['idcomp']]." modifie en ".$data['valcomp']."</p>
+                                                        <p>".$data['DA']."</p>";
+                                        include 'rollback_button.php';
+                                        /*echo " <form method=\"post\" action=\"suppression_modif.php\">
+                                                    <input type=\"hidden\" name=\"modif-".$nbModifValComp['idcomp']."\"></input>
+                                                    <button type=\"submit\" class=\"btn btn-primary\">Supprimer la modification<\button>
+                                                </form>"*/
+
+                                        echo "      </article>
+                                                </div>";
+                                    }
+                                    if ($ancienNomComp[$data['idcomp']] != $data['nomcomp'])
+                                    {
+                                        echo "  <div class=\"col-xs-6\">
+                                                    <article>
+                                                        <h4>Modification du nom du composant ".$data['nomcomp']."</h4>
+                                                        <p> Ancien nom : ".$ancienNomComp[$data['idcomp']]."</p>
+                                                        <p>De valeur ".$data['valcomp']."</p>
+                                                        <p>".$data['DA']."</p>";
+                                        include 'rollback_button.php';
+
+                                        echo        "</article>
+                                                </div>";
+                                    }
                                 }
                                 else
                                 {
@@ -94,11 +120,14 @@ try {
                                                 <article>
                                                     <h4>Ajout du composant ".$data['nomcomp']."</h4>
                                                     <p>De valeur ".$data['valcomp']."</p>
-                                                    <p>".$data['DA']."</p>
-                                                </article>
+                                                    <p>".$data['DA']."</p>";
+                                    include 'rollback_button.php';
+
+                                    echo        "</article>
                                             </div>";
                                 }
                                 $ancienneValeur[$data['idcomp']] = $data['valcomp'];
+                                $ancienNomComp[$data['idcomp']] = $data['nomcomp'];
 
                             }
         				?>
