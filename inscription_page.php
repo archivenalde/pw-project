@@ -23,7 +23,15 @@
 	    	</header>
 	    </div>
         <div id="body-page" class="container">
-            <form class="form-horizontal" method="POST" action="inscription.php" id="signup-form">
+            <?php
+                if (isset($_POST['message-mail-existant']))
+                {
+                    echo $_POST['message-mail-existant'];
+                } else {
+                    echo "non";
+                }
+            ?>
+            <form class="form-horizontal" method="POST" action="inscription_page.php" id="signup-form">
                 <div class="form-group">
                     <label for="lastname" class="col-lg-2 control-label" >Nom</label>
                     <div class="col-lg-4">
@@ -82,6 +90,8 @@
 
                 <input id="validate-signup" type="button" class="btn btn-primary btn-lg col-lg-offset-5" value="Valider l'inscription"/>
             </form>
+
+            <?php include 'inscription.php'; ?>
         </div>
 
         <script type="text/javascript" src="inscription.js"></script>
